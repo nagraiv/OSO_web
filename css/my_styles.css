@@ -1,3 +1,9 @@
+/*.header {*/
+/*    position: sticky;*/
+/*    top: 0;*/
+/*    z-index: 100;*/
+/*}*/
+
 .navbar {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2),
             0 5px 20px rgb(127 137 161 / 30%);
@@ -15,21 +21,27 @@
     margin-right: 8px;
 }
 
-.first {
-    padding-top: 56px;
+/*.first {*/
+/*    padding-top: 56px;*/
+/*    background-color: #e7e8ee;*/
+/*}*/
+
+.odd {
     background-color: #e7e8ee;
 }
 
 .screen {
-    min-height: 100vh;
+    padding: 20px 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
 }
 
-.third {
-    background-color: #e7e8ee;
+@media (orientation: landscape) {
+    .screen {
+        min-height: 100vh;
+    }
 }
 
 .container {
