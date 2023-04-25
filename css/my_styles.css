@@ -1,0 +1,41 @@
+.navbar {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2),
+            0 5px 20px rgb(127 137 161 / 30%);
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.first {
+    padding-top: 56px;
+    background-color: #e7e8ee;
+}
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.third {
+    background-color: #e7e8ee;
+}
+
+.container {
+    max-width: 768px;
+}
+
+.bi {
+    opacity: 0.8;
+}
