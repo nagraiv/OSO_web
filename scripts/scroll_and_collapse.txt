@@ -1,0 +1,35 @@
+<script>
+    const navEl = document.querySelector('.navbar-nav');
+    if (window.innerWidth < 768) {
+        navEl.addEventListener('click', function(){collapseNav(event, menuScroll);}, false);
+    }
+    window.addEventListener("resize", function () {
+        if (window.innerWidth < 768) {
+            navEl.removeEventListener('click', function(){collapseNav(event, menuScroll);}, false);
+            navEl.addEventListener('click', function(){collapseNav(event, menuScroll);}, false);
+        } else {
+            navEl.removeEventListener('click', function(){collapseNav(event, menuScroll);}, false);
+        }
+
+    }, false);
+
+    function collapseNav(event, callback) {
+        if (event.target !== event.currentTarget) {
+            event.preventDefault();
+            // const headerEl = document.querySelector('.header');
+            // console.log(headerEl.offsetHeight);
+            collapseElementList = document.querySelectorAll('.navbar-collapse');
+            collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl));
+            const headerNewEl = document.querySelector('.header');
+            callback();
+            // document.getElementById("second-screen").scrollIntoView({behavior: "smooth"});
+        }
+        event.stopPropagation();
+    }
+
+    function menuScroll() {
+        const headerEl = document.querySelector('.header');
+        console.log(headerEl.offsetHeight);
+        document.getElementById("second-screen").scrollIntoView({behavior: "smooth"});
+    }
+</script>
